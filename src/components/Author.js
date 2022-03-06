@@ -9,7 +9,7 @@ import { Link, useParams } from "react-router-dom";
 export default function Author () {
 
   // Extract the `name` URL parameter.
-  let { name } = useParams();
+  const { name } = useParams();
   console.log(name);
   const authors = useSelector(selectAuthors);
   const author = authors[name];
@@ -17,7 +17,7 @@ export default function Author () {
 
   return (
     <main>
-      <h1>Articles by REPLACE ME</h1>
+      <h1>Articles by {name} </h1>
       <ul>
         {
           author && author.articles ? author.articles.map(slug => {
