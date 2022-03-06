@@ -21,3 +21,4 @@ export default function Article () {
     </div>
   ) : <p> No article found with that title... </p>
 }
+ 
